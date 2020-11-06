@@ -1,38 +1,136 @@
 .App {
+  background: #1488cc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1488cc,
+    #2b32b2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1488cc,
+    #2b32b2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: grid;
+  place-items: center;
+  place-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.login__imgBg {
+  transform: scaleX(-1);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  width: 210px;
+}
+.login__container {
+  display: flex;
+  height: 550px;
+  width: 1000px;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 0.7;
+  background: white;
+  padding: 70px 20px;
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+.right img {
+  object-fit: contain;
+  width: 250px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.right p {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.right input {
+  width: 80%;
+  height: 37px;
+  padding: 8px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid rgba(209, 209, 209, 0.507);
+}
+.right input::placeholder {
+  color: rgba(209, 209, 209, 0.829);
+}
+.right button {
+  width: 80%;
+  background: #19d3da;
+  border: none;
+  padding: 7px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.right span {
+  color: #19d3da;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.right .slogan {
+  color: #a4a6a8;
+  width: 85%;
+}
+.login__contactInfo {
+  color: #303133;
+}
+
+/* left  */
+.left {
+  flex: 1;
+  background-image: url("./bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+}
+.left {
+  display: grid;
+  place-items: center;
+}
+.left__content {
+  width: 80%;
+  margin-top: -20px;
+}
+.left__content h3,
+h1 {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.left__content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.left__content h3 {
+  font-size: 1.3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left__content button {
+  margin-top: 20px;
+  background: #19d3da;
+  border: none;
+  padding: 10px 25px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+button:hover {
+  transition: 0.3s all ease;
+  background: #1488cc;
 }
